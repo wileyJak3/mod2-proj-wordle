@@ -35,3 +35,9 @@
 
   .main-card-inner p{
     font-size: 1.3rem;
+
+    #like-dislike{
+      width: 16vw;
+  text-align: center;
+  /* border: solid black; */
+  padding-bottom:0 ;
