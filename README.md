@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mod 2 project-proposal
 
-## Available Scripts
+ ### All In One Dictionary
+Problem: currently you have to search urban dictionary and another dictionary seprately to find out if the word you are looking up is slang, an actual word, or not a word at all. Even frequently used online acronyms must be search seprately such as GG, or FTW. This app intends to off one location to find out all the available information about a word in one search.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technical Problem Solution
+The application will make use of the urban dictionary api and other free dictionary api to get the get the definitions of the words. The user will input a word/string that will be search in the databases of all the dictionary applications. The data will either be stored inside an object before display using map or directly called and  displayed on the screen as a component for each dictionary.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Urban Dictionary:
+API 1: https://rapidapi.com/community/api/urban-dictionary
+API 2: https://www.programmableweb.com/api/urbanscraper
 
-### `npm test`
+Tag Dictionary:
+https://rapidapi.com/snokleby/api/tagdef/pricing
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Oxford Dictionary:
+https://rapidapi.com/Oxford_Dictionaries/api/oxford-dictionaries/details
+https://rapidapi.com/Oxford_Dictionaries/api/oxford-english-dictionary
 
-### `npm run build`
+Spell Check:
+https://rapidapi.com/montanaflynn/api/spellcheck
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technical Challenges 
+- API (insuring no bugs and everything runs)
+- Searching the databses in a timely and efficient manner and printing the information to the screen dynamically.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Wireframe
+Homepage Wireframe:
+![Test Image 1](wireframe1.png)
 
-## Learn More
+Definition Page Wireframe:
+![Test Image 1](wireframe2.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Timeline
 
-### Analyzing the Bundle Size
+- Tuesday
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  - Weather Project/Wine
 
-### Making a Progressive Web App
+ - Wednesday 
+    - Start trying to connect to all api's that will be used in project
+    
+- Thursday:
+   - Use api within site/build components
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Friday:
+- Style components
 
-### Advanced Configuration
+Saturday:
+- Set up router
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Sunday:
+- clean up
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
