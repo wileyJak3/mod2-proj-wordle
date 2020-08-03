@@ -19,3 +19,11 @@ function MainDictionCard() {
     return urbanData.map((Element) => (
       <div id="main-card-urban">
         {console.log("this is the element", { Element })}
+
+        <li>
+          <p>{Element.definition}</p>
+          <p id="example">{Element.example}</p>
+          <p id="author">
+            by {Element.author} {Element.written_on.substring(0, 10)}
+          </p>
+          <div id="like-dislike"></div>
