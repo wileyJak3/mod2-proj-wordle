@@ -5,3 +5,7 @@ import WordContext from "./contexts/WordContext";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import ApiCall from "./ApiCall";
+import ApiContext from "./contexts/ApiContext";
+import DictionaryCard from "./DictionaryCard";
