@@ -56,3 +56,8 @@ function MainDictionCard() {
                 <Nav variant="tabs" defaultActiveKey="#first">
                   <Nav.Item>
                     
+
+                  <Nav.Link href="#first">Definition</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="#link">Link</Nav.Link>
