@@ -32,3 +32,6 @@
 .main-card-inner{
   margin-left: 1vw;
   
+
+  .main-card-inner p{
+    font-size: 1.3rem;
