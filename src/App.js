@@ -23,3 +23,5 @@ function App() {
       {/* <WordSearchBar/> */}
       {/* <ApiCall/> */}
       <WordContext.Provider value={{ wordContext, setWordContext }}></WordContext.Provider>
+      {/* <ApiContext.Provider value={{ ApiData, setApiData }}> */}
+      <ApiContext.Provider value={[{ googleData, setGoogleData },{ urbanData, setUrbanData},{ quoteData, setQuoteData }]}>
