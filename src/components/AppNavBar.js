@@ -16,3 +16,10 @@ react-router-dom";
 import Compare from './Compare'
 import './styles/nav-bar.css'
 
+function AppNavbar() {
+  //
+  //! ─── CONTEXT ────────────────────────────────────────────────────────────────────
+  const allApiData = useContext(ApiContext);
+  const wordData = useContext(WordContext);
+  // const [googleData,urbanData,quoteData] = allApiData
+  console.log(allApiData[0].googleData);
