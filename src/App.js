@@ -17,3 +17,9 @@ function App() {
   const [googleData, setGoogleData] = useState(null);
   const [urbanData, setUrbanData] = useState(null);
   const [quoteData, setQuoteData] = useState(null);
+
+  return (
+    <div className="App">
+      {/* <WordSearchBar/> */}
+      {/* <ApiCall/> */}
+      <WordContext.Provider value={{ wordContext, setWordContext }}></WordContext.Provider>
