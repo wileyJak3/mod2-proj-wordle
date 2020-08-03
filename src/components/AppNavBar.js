@@ -53,3 +53,7 @@ div>
               </Nav.Link>
             </Nav>
             <Nav></Nav>
+
+            {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
+            <WordSearchBar />
+              {/* {wordContext ? <ApiCall word={wordContext} /> : "Loading..."} */}
