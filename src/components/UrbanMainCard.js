@@ -14,3 +14,8 @@ function MainDictionCard() {
   urbanData = urbanData.splice(0, 2);
 
   console.error("This is the urban data", urbanData);
+
+  function printMeaning() {
+    return urbanData.map((Element) => (
+      <div id="main-card-urban">
+        {console.log("this is the element", { Element })}
