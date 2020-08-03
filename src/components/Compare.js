@@ -70,3 +70,13 @@ function AppNavbar() {
         {/* {allApiData[1].urbanData ? <UrbanMainCard />:null } */}
         <Switch>
           <Route path="/Dictionary"></Route>
+          {allApiData[0].googleData ? <MainDictionaryCard /> : null}
+          </Route>
+
+          <Route path="/Urban">
+            {allApiData[1].urbanData ? <UrbanMainCard /> : null}
+          </Route>
+
+          <Route path="/Compare">
+            {allApiData[1].urbanData ? <Compare/> : null}
+          </Route>
