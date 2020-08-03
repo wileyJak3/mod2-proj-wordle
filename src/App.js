@@ -10,3 +10,7 @@ import WordContext from "./components/contexts/WordContext";
 import AppNavbar from "./components/AppNavBar";
 // import AppNavBar from './components/AppNavBar'
 import ApiContext from "./components/contexts/ApiContext";
+
+function App() {
+  const [wordContext, setWordContext] = useState("");
+  // const [ApiData, setApiData] = useState(null);
