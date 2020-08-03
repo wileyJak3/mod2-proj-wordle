@@ -1,0 +1,7 @@
+.main-card-urban .row {
+  align-items: center;
+  border-bottom: solid black 1px;
+  justify-content: left;
+  
+  /* padding-bottom: 5vh; */
+}
