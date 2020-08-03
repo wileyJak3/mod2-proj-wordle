@@ -36,3 +36,11 @@ function MainDictionCard() {
                 <p id="left-border">Dislikes:{Element.thumbs_down}</p>
               </Col>
             </Row>
+
+            </div>
+        </li>
+      </div>
+    ));
+
+    //   for(let i = 0; i<=2;i++){
+    //    return <div className="main-card-inner">
