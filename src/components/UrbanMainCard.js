@@ -50,3 +50,9 @@ function MainDictionCard() {
         <Container>
           <Row>
             <Col>
+
+            <Card>
+              <Card.Header>
+                <Nav variant="tabs" defaultActiveKey="#first">
+                  <Nav.Item>
+                    
