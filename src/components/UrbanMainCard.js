@@ -44,3 +44,9 @@ function MainDictionCard() {
 
     //   for(let i = 0; i<=2;i++){
     //    return <div className="main-card-inner">
+
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Col>
