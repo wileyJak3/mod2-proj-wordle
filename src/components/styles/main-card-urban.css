@@ -54,3 +54,10 @@
   }
   #left-border .col{
       border-left: solid black;
+
+    }
+    #line-border li{
+        /* border-bottom: solid black 1px; */
+        margin-bottom: 3vh;
+       
+    }
