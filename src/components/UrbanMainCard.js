@@ -91,3 +91,4 @@ function MainDictionCard() {
        );
      }
      
+     export default MainDictionCard;
