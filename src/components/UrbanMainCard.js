@@ -61,3 +61,9 @@ function MainDictionCard() {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href="#link">Link</Nav.Link>
+
+                    </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="#disabled" disabled>
+                      Disabled
+                    </Nav.Link>
