@@ -12,3 +12,7 @@ import DictionaryCard from "./DictionaryCard";
 mport MainDictionaryCard from "./MainDictionaryCard";
 import UrbanMainCard from "./UrbanMainCard";
 import { BrowserRouter as Router, Switch, Route, Link } from 
+react-router-dom";
+import Compare from './Compare'
+import './styles/nav-bar.css'
+
