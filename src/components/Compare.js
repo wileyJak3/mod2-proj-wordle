@@ -50,3 +50,12 @@ function AppNavbar() {
             </Nav>
             <Nav>
               {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
+
+              <WordSearchBar />
+              {/* {wordContext ? <ApiCall word={wordContext} /> : "Loading..."} */}
+              {/* </WordContext.Provider> */}
+            </Nav>
+           
+
+            {/*//! Incomplete Component */}
+            {/* <Nav></Nav>
