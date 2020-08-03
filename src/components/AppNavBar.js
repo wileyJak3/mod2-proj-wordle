@@ -57,3 +57,16 @@ div>
             {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
             <WordSearchBar />
               {/* {wordContext ? <ApiCall word={wordContext} /> : "Loading..."} */}
+
+              {/* </WordContext.Provider> */}
+            </Nav>
+           
+
+           {/*//! Incomplete Component */}
+           {/* <Nav>
+             <Nav.Link>
+               <Link to="/Compare">Compare</Link>
+             </Nav.Link>
+           </Nav> */}
+           
+         {/* </div> */}
