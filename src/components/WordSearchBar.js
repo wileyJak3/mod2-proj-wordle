@@ -45,7 +45,10 @@ function WordSearchBar() {
     }
   }
 
-  function handleChange(event) {
+
+// this funtion allows the display fo the words typed by the user as they are type (removed twoards the end due to time constrains)
+
+  let handleChange =(event)=> {
     // console.log("changed");
     console.log(event.target.value);
     //* setName(event.target.value)
@@ -56,17 +59,25 @@ function WordSearchBar() {
     setTempName(event.target.value);
   }
 
-  function generateDef(name) {
+  let generateDef =(name)=> {
     return name ? <ApiCall word={word} /> : "Loading...";
     // {console.log("this is the current name",{name})}
   }
 
   // when your writing a fucntion can simply use the variable name, don't need the curly braces. In fact, if we use the curly braces we will set our variable to a js object and not a value.
-  function toggleSubmitValue() {
+  
+  
+  
+  // This function toggles a state value for conditonal rendering
+  let toggleSubmitValue =()=> {
     setToggle(!toggle);
   }
 
-  function SubmitValue() {
+
+  
+  // Funtion sends the value to the apicall file to be queried
+
+  let SubmitValue = () =>{
     // setName(tempName);
     // console.log(tempName);
     // console.log(name);
@@ -74,7 +85,10 @@ function WordSearchBar() {
     dataContext.setWordContext(null);
     toggleSubmitValue();
   }
-  function SubmitValue2() {
+
+
+  // function resets the search bar
+  let  SubmitValue2 =() => {
     dataContext.setWordContext(tempName);
     toggleSubmitValue();
     setTempName("");

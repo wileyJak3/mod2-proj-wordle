@@ -8,14 +8,19 @@ import ApiContext from "./contexts/ApiContext";
 import { useContext } from "react";
 import "./styles/main-card-urban.css";
 
-function MainDictionCard() {
+// The main dictionary car is the card that shows an overview of the dictionary clientInformatio
+
+let MainDictionCard =() => {
   const apiContextData = useContext(ApiContext);
   let urbanData = apiContextData[1].urbanData.list;
   urbanData = urbanData.splice(0, 2);
 
   console.error("This is the urban data", urbanData);
 
-  function printMeaning() {
+
+  // This fucntion print out the definitions of the dictionary, received from API
+  
+  let printMeaning = () => {
     return urbanData.map((Element) => (
       <div id="main-card-urban">
         {console.log("this is the element", { Element })}
@@ -48,6 +53,7 @@ function MainDictionCard() {
 
     //   }
   }
+
 
   return (
     <div>

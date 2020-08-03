@@ -15,10 +15,10 @@ import Compare from './Compare'
 import './styles/nav-bar.css'
 
 
+// This functionis what's passed into the app.js and basically the hub of the entire program
 
 
-
-function AppNavbar() {
+let AppNavbar = () => {
   //
   //! ─── CONTEXT ────────────────────────────────────────────────────────────────────
   const allApiData = useContext(ApiContext);

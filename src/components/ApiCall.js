@@ -9,7 +9,7 @@ import DictionaryCard from './DictionaryCard'
 import ApiContext from './contexts/ApiContext';
 
 
-
+// The file contains all the api calls needed for the application
 
 const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
 
@@ -247,6 +247,8 @@ console.log(allData)
  console.log(apiContextData[1].urbanData)
  console.log(apiContextData[2].quoteData)
  
+
+// Below the api results are all stored tin a context so that the values can be used and shared by all the components in the application
 
   return (
     <div>

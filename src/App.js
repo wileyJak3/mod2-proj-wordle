@@ -10,7 +10,9 @@ import AppNavbar from "./components/AppNavBar";
 // import AppNavBar from './components/AppNavBar'
 import ApiContext from "./components/contexts/ApiContext";
 
-function App() {
+// Funtion initializaes the states to be passed into the context and begins the program
+
+let App = () => {
   const [wordContext, setWordContext] = useState("");
   // const [ApiData, setApiData] = useState(null);
   const [googleData, setGoogleData] = useState(null);

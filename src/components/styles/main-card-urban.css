@@ -1,5 +1,7 @@
+/* THis file handles the styling for urban dictionaries main card */
+
 .main-card-urban .row {
-    align-items: center;
+  align-items: center;
     border-bottom: solid black 1px;
     justify-content: left;
     

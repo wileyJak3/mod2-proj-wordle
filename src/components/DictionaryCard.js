@@ -5,7 +5,10 @@ import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
 import { Col} from "react-bootstrap";
 
-function DictionaryCard() {
+
+// this function creates a card that suppose to look somewhat similar to the one on dictionary.com
+
+let  DictionaryCard = () => {
   return (
     <div>
 

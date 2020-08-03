@@ -9,12 +9,17 @@ import { useContext } from "react";
 import "./styles/main-card.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function Compare() {
+
+// Component wasn't complete, but it was usppose to display all the defintions available for urban dicitionary and google dictionary side by side on a single 
+
+let Compare = () => {
   const apiContextData = useContext(ApiContext);
   let googleData = apiContextData[0].googleData[0];
   console.error("This is the google data", googleData);
 
-  function printMeaning() {
+  // copy of prior print meanings funciton
+
+  let printMeaning = () => {
     return googleData.meanings.map((Element) => (
       <div>
         <h6 id="part-of-speach">{Element.partOfSpeech}</h6>
@@ -23,7 +28,9 @@ function Compare() {
       </div>
     ));
   }
-  function printMeaningTab(speechPart) {
+
+// functon that attempted to do whats described above
+  let printMeaningTab = (speechPart) => {
     return googleData.meanings[googleData.meanings.findIndex(speechPart)]((Element) => (
       <div>
         <h6 id="part-of-speach">{Element.partOfSpeech}</h6>
@@ -32,7 +39,10 @@ function Compare() {
       </div>
     ));
   }
-  function printTabs() {
+
+
+  // A function tht dynamically creates card tabs base on the parts of speach received for them api
+  let printTabs = () => {
     return googleData.meanings.map((Element) => (
       <div>
         <Nav.Item>
@@ -41,7 +51,10 @@ function Compare() {
       </div>
     ));
   }
-  function createNavTabs() {}
+
+// a fucntion thats suppose to dynamically get the information related to the dynamically created tabs (doesnt work)
+
+ let  createNavTabs = () => {}
   return (
     <div>
         <Router>
