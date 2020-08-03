@@ -79,3 +79,6 @@ function MainDictionCard() {
                 </div>
                 {/* {urbanData ? printMeaning() : null} */}
                 <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+            </Card>
+          </Col>
