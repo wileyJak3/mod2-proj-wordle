@@ -5,7 +5,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ApiCall from "./components/ApiCall";
 import WordSearchBar from "./components/WordSearchBar";
-
 import WordContext from "./components/contexts/WordContext";
 import AppNavbar from "./components/AppNavBar";
 // import AppNavBar from './components/AppNavBar'
@@ -22,13 +21,14 @@ function App() {
     <div className="App">
       {/* <WordSearchBar/> */}
       {/* <ApiCall/> */}
-      <WordContext.Provider value={{ wordContext, setWordContext }}></WordContext.Provider>
-      {/* <ApiContext.Provider value={{ ApiData, setApiData }}> */}
-      <ApiContext.Provider value={[{ googleData, setGoogleData },{ urbanData, setUrbanDat
-        <AppNavbar />
+      <WordContext.Provider value={{ wordContext, setWordContext }}>
+        {/* <ApiContext.Provider value={{ ApiData, setApiData }}> */}
+        <ApiContext.Provider value={[{ googleData, setGoogleData },{ urbanData, setUrbanData},{ quoteData, setQuoteData }]}>
+          <AppNavbar />
         </ApiContext.Provider>
       </WordContext.Provider>
     </div>
   );
 }
+
 export default App;
