@@ -36,3 +36,14 @@ function AppNavbar() {
     <div>
       <Router>
         <Na
+
+div>
+<Navbar.Brand><Link to="/">Wordle</Link></Navbar.Brand>
+</div>
+
+{/* <div className="nav-bar-flex"> */}
+<Nav>
+  <Nav.Link>
+    <Link to="/Urban">Urban</Link>
+  </Nav.Link>
+</Nav>
