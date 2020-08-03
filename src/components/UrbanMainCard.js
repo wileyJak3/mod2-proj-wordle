@@ -9,3 +9,8 @@ import { useContext } from "react";
 import "./styles/main-card-urban.css";
 
 function MainDictionCard() {
+  const apiContextData = useContext(ApiContext);
+  let urbanData = apiContextData[1].urbanData.list;
+  urbanData = urbanData.splice(0, 2);
+
+  console.error("This is the urban data", urbanData);
