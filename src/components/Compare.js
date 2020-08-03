@@ -59,3 +59,14 @@ function AppNavbar() {
 
             {/*//! Incomplete Component */}
             {/* <Nav></Nav>
+
+            <Nav.Link>
+                <Link to="/Compare">Compare</Link>
+              </Nav.Link>
+            </Nav> */}
+            
+          {/* </div> */}
+        </Navbar>
+        {/* {allApiData[1].urbanData ? <UrbanMainCard />:null } */}
+        <Switch>
+          <Route path="/Dictionary"></Route>
