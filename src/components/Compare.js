@@ -7,3 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import UrbanMainCard from "./UrbanMainCard";
+import { BrowserRouter as Router, Switch, Route, Link } from react-router-dom";
+import Compare from './Compare'
+import './styles/nav-bar.css'
