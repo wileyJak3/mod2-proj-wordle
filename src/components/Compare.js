@@ -19,3 +19,10 @@ function AppNavbar() {
   const wordData = useContext(WordContext);
   // const [googleData,urbanData,quoteData] = allApiData
   console.log(allApiData[0].googleData);
+  console.log(allApiData[1].urbanData);
+  console.log(allApiData[2].quoteData);
+
+  //! ─── STATE ──────────────────────────────────────────────────────────────────────
+  //
+
+  const [wordContext, setWordContext] = useState("");
