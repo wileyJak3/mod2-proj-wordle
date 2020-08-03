@@ -73,3 +73,9 @@ function MainDictionCard() {
               </Card.Header>
               <Card.Body>
                 <div id="line-border"></div>
+
+                <h1 id="title-header-urban">{urbanData[0].word}</h1>
+                  <ol>{printMeaning()}</ol>
+                </div>
+                {/* {urbanData ? printMeaning() : null} */}
+                <Button variant="primary">Go somewhere</Button>
