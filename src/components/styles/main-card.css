@@ -8,3 +8,8 @@
   margin-left: 0.3vw;
   margin-right: 0.5vw;
 }
+#title-header {
+  font-weight: bold;
+  margin-right: 1vw;
+  font-size: 60px;
+}
