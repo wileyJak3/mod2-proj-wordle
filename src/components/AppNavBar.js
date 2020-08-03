@@ -9,3 +9,6 @@ import Container from "react-bootstrap/Container";
 import ApiCall from "./ApiCall";
 import ApiContext from "./contexts/ApiContext";
 import DictionaryCard from "./DictionaryCard";
+mport MainDictionaryCard from "./MainDictionaryCard";
+import UrbanMainCard from "./UrbanMainCard";
+import { BrowserRouter as Router, Switch, Route, Link } from 
