@@ -3,3 +3,8 @@
   border-bottom: solid black 1px;
   /* padding-bottom: 5vh; */
 }
+
+.main-card div {
+  margin-left: 0.3vw;
+  margin-right: 0.5vw;
+}
