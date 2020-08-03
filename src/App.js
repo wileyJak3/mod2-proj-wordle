@@ -24,4 +24,10 @@ function App() {
       {/* <ApiCall/> */}
       <WordContext.Provider value={{ wordContext, setWordContext }}></WordContext.Provider>
       {/* <ApiContext.Provider value={{ ApiData, setApiData }}> */}
-      <ApiContext.Provider value={[{ googleData, setGoogleData },{ urbanData, setUrbanData},{ quoteData, setQuoteData }]}>
+      <ApiContext.Provider value={[{ googleData, setGoogleData },{ urbanData, setUrbanDat
+        <AppNavbar />
+        </ApiContext.Provider>
+      </WordContext.Provider>
+    </div>
+  );
+}
