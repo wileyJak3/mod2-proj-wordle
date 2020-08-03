@@ -47,3 +47,9 @@ div>
     <Link to="/Urban">Urban</Link>
   </Nav.Link>
 </Nav>
+<Nav>
+              <Nav.Link>
+                <Link to="/Dictionary">Dictionary</Link>
+              </Nav.Link>
+            </Nav>
+            <Nav></Nav>
