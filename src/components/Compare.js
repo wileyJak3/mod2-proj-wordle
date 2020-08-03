@@ -44,3 +44,9 @@ function AppNavbar() {
             </Nav>
             <Nav>
               <Nav.Link></Nav.Link>
+
+              <Link to="/Dictionary">Dictionary</Link>
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
