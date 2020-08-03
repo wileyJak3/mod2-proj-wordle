@@ -1,98 +1,112 @@
-import React, { useState, useContext } from "react";
-import WordSearchBar from "./WordSearchBar";
-import WordContext from "./contexts/WordContext";
+import React from "react";
+import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";import Form from "react-bootstrap/Form";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import UrbanMainCard from "./UrbanMainCard";
-import { BrowserRouter as Router, Switch, Route, Link } from react-router-dom";
-import Compare from './Compare'
-import './styles/nav-bar.css'
+import Button from "react-bootstrap/Button";
+import { Container, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import ApiContext from "./contexts/ApiContext";
+import { useContext } from "react";
+import "./styles/main-card.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function AppNavbar() {
-  //
-  //! ─── CONTEXT ────────────────────────────────────────────────────────────────────
-  const allApiData = useContext(ApiContext);
-  const wordData = useContext(WordContext);
-  // const [googleData,urbanData,quoteData] = allApiData
-  console.log(allApiData[0].googleData);
-  console.log(allApiData[1].urbanData);
-  console.log(allApiData[2].quoteData);
+function Compare() {
+  const apiContextData = useContext(ApiContext);
+  let googleData = apiContextData[0].googleData[0];
+  console.error("This is the google data", googleData);
 
-  //! ─── STATE ──────────────────────────────────────────────────────────────────────
-  //
-
-  const [wordContext, setWordContext] = useState("");
-
+  function printMeaning() {
+    return googleData.meanings.map((Element) => (
+      <div>
+        <h6 id="part-of-speach">{Element.partOfSpeech}</h6>
+        <p>{Element.definitions[0].definition}</p>
+        <p id="example">{Element.definitions[0].example}</p>
+      </div>
+    ));
+  }
+  function printMeaningTab(speechPart) {
+    return googleData.meanings[googleData.meanings.findIndex(speechPart)]((Element) => (
+      <div>
+        <h6 id="part-of-speach">{Element.partOfSpeech}</h6>
+        <p>{Element.definitions[0].definition}</p>
+        <p id="example">{Element.definitions[0].example}</p>
+      </div>
+    ));
+  }
+  function printTabs() {
+    return googleData.meanings.map((Element) => (
+      <div>
+        <Nav.Item>
+          <Nav.Link><Link to = {Element.partOfSpeech} >{Element.partOfSpeech}</Link></Nav.Link>
+        </Nav.Item>
+      </div>
+    ));
+  }
+  function createNavTabs() {}
   return (
     <div>
-      <Router>
-        <Navbar bg="dark" variant="dark">
-        <div>
-            <Navbar.Brand><Link to="/">Wordle</Link></Navbar.Brand>
-          </div>
-         
-          {/* <div className="nav-bar-flex"> */}
-            <Nav></Nav>
-
-            <Nav.Link>
-                <Link to="/Urban">Urban</Link>
-              </Nav.Link>
+        <Router>
+      <Col>
+        <Card>
+          <Card.Header>
+              
+                  
+            <Nav variant="tabs" defaultActiveKey="#first">
+              <Nav.Item>
+                <Nav.Link href="#disabled" disabled>
+                  Disabled
+                </Nav.Link>
+              </Nav.Item>
+              {printTabs()}
             </Nav>
-            <Nav>
-              <Nav.Link></Nav.Link>
-
-              <Link to="/Dictionary">Dictionary</Link>
-              </Nav.Link>
-            </Nav>
-            <Nav>
-              {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
-
-              <WordSearchBar />
-              {/* {wordContext ? <ApiCall word={wordContext} /> : "Loading..."} */}
-              {/* </WordContext.Provider> */}
-            </Nav>
-           
-
-            {/*//! Incomplete Component */}
-            {/* <Nav></Nav>
-
-            <Nav.Link>
-                <Link to="/Compare">Compare</Link>
-              </Nav.Link>
-            </Nav> */}
             
-          {/* </div> */}
-        </Navbar>
-        {/* {allApiData[1].urbanData ? <UrbanMainCard />:null } */}
-        <Switch>
-          <Route path="/Dictionary"></Route>
-          {allApiData[0].googleData ? <MainDictionaryCard /> : null}
+          </Card.Header>
+          <Card.Body>
+            <Card.Title>
+              <div className="main-card">
+                <Row>
+                  <div>
+                    <h2 id="title-header">{`${googleData.word}`}</h2>
+                  </div>
+                  <div>
+                    <p id="phonetic">{`[${googleData.phonetics[0].text}]`}</p>
+                  </div>
+                </Row>
+              </div>
+            </Card.Title>
+            <Card.Text>
+              {googleData ? printMeaning() : null}
+              {googleData ? printMeaningTab("adjective") : null}
+              {/* <div className="main-card-inner">
+                  <h6 id ="part-of-speach">{googleData.meanings[0].partOfSpeech}</h6>
+                  <p>{googleData.meanings[0].definitions[0].definition}</p>
+                  <p id ="example">{googleData.meanings[0].definitions[0].example}</p>
+                  </div> */}
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+          <Switch>
+          <Route path="/Dictionary">
+            {/* {googleData.meanings ? <MainDictionaryCard /> : null} */}
           </Route>
 
           <Route path="/Urban">
-            {allApiData[1].urbanData ? <UrbanMainCard /> : null}
+            {/* {allApiData[1].urbanData ? <UrbanMainCard /> : null} */}
           </Route>
 
           <Route path="/Compare">
-            {allApiData[1].urbanData ? <Compare/> : null}
+            {/* {allApiData[1].urbanData ? <Compare/> : null} */}
           </Route>
 
-<Route path="/">
-          { wordData.wordContext ? <h1 id ="wordSearch">{wordData.wordContext}</h1>:null}
-            {allApiData[2].quoteData ? <h1 id ="quote">{`Quote: ${allApiData[2].quoteData.content}`}</h1>:<h1 id = "intro" >Wordle</h1>}
+          <Route path="/">
+            {/* {allApiData[0].googleData ? <MainDictionaryCard /> : null} */}
           </Route>
           {/* <DictionaryCard/> */}
-          </Switch>
+        </Switch>
+        </Card>
+      </Col>
       </Router>
     </div>
-    // <div className="nav-bar-flex">
-    //   <WordContext.Provider value={{ wordContext, setWordContext }}>
-    //       <WordSearchBar/>
-    //  </WordContext.Provider>
-    // </div>
   );
-}export default AppNavbar;
+}
+
+export default Compare;
