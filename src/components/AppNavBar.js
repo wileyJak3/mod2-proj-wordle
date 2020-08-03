@@ -70,3 +70,13 @@ div>
            </Nav> */}
            
          {/* </div> */}
+
+         {/* {allApiData[1].urbanData ? <UrbanMainCard />:null } */}
+        <Switch>
+          <Route path="/Dictionary">
+            {allApiData[0].googleData ? <MainDictionaryCard /> : null}
+          </Route>
+
+          <Route path="/Urban">
+            {allApiData[1].urbanData ? <UrbanMainCard /> : null}
+          </Route>
