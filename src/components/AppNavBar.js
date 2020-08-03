@@ -98,3 +98,9 @@ div>
     //   <WordContext.Provider value={{ wordContext, setWordContext }}>
     //       <WordSearchBar/>
     //  </WordContext.Provider>
+
+     // </div>
+  );
+}
+
+export default AppNavbar;
