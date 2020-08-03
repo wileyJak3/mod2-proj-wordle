@@ -5,3 +5,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ApiCall from "./components/ApiCall";
 import WordSearchBar from "./components/WordSearchBar";
+
+import WordContext from "./components/contexts/WordContext";
+import AppNavbar from "./components/AppNavBar";
+// import AppNavBar from './components/AppNavBar'
+import ApiContext from "./components/contexts/ApiContext";
