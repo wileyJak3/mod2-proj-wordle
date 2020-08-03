@@ -37,3 +37,10 @@ function AppNavbar() {
          
           {/* <div className="nav-bar-flex"> */}
             <Nav></Nav>
+
+            <Nav.Link>
+                <Link to="/Urban">Urban</Link>
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link></Nav.Link>
