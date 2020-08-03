@@ -15,11 +15,11 @@ let MainDictionCard =() => {
   let urbanData = apiContextData[1].urbanData.list;
   urbanData = urbanData.splice(0, 2);
 
-  console.error("This is the urban data", urbanData);
+  // console.error("This is the urban data", urbanData);
 
 
   // This fucntion print out the definitions of the dictionary, received from API
-  
+
   let printMeaning = () => {
     return urbanData.map((Element) => (
       <div id="main-card-urban">

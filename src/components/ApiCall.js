@@ -229,13 +229,13 @@ const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
     // getUrbanDef();
   }, []); // This bracket here is to prevent onUpdate behavior. So we're telling it to re-render when [] (nothing) updates
 
-  console.log(urbanDef);
+  // console.log(urbanDef);
   // console.log(spellCheck);
-  console.log(googleDef);
+  // console.log(googleDef);
   // console.log(acronym)
   // console.log(jsonText)
   // console.log(similarWords)
-  console.log(quote);
+  // console.log(quote);
   let allData = [null,null,null]
   allData[0] = (urbanDef)
   allData[1]= (googleDef)
@@ -243,9 +243,9 @@ const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
   allData[2] = (quote)
 console.log(allData)
 //  let ram = allData2 ? apiContextData.setApiData(allData):null
- console.log(apiContextData[0].googleData)
- console.log(apiContextData[1].urbanData)
- console.log(apiContextData[2].quoteData)
+//  console.log(apiContextData[0].googleData)
+//  console.log(apiContextData[1].urbanData)
+//  console.log(apiContextData[2].quoteData)
  
 
 // Below the api results are all stored tin a context so that the values can be used and shared by all the components in the application

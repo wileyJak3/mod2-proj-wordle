@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 let Compare = () => {
   const apiContextData = useContext(ApiContext);
   let googleData = apiContextData[0].googleData[0];
-  console.error("This is the google data", googleData);
+  // console.error("This is the google data", googleData);
 
   // copy of prior print meanings funciton
 

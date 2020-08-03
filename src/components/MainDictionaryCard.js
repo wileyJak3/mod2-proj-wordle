@@ -11,7 +11,7 @@ import './styles/main-card.css'
 function MainDictionCard() {
   const apiContextData = useContext(ApiContext);
   let googleData = apiContextData[0].googleData[0];
-  console.error("This is the google data", googleData);
+  // console.error("This is the google data", googleData);
 
   function printMeaning (){
 
