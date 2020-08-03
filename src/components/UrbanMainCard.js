@@ -82,3 +82,12 @@ function MainDictionCard() {
                 </Card.Body>
             </Card>
           </Col>
+          </Card.Body>
+            </Card>
+          </Col>
+           </Row>
+           </Container>
+         </div>
+       );
+     }
+     
