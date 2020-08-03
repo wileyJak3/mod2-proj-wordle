@@ -80,3 +80,12 @@ div>
           <Route path="/Urban">
             {allApiData[1].urbanData ? <UrbanMainCard /> : null}
           </Route>
+
+          <Route path="/Compare">
+            {allApiData[1].urbanData ? <Compare/> : null}
+          </Route>
+
+          <Route path="/">
+          { wordData.wordContext ? <h1 id ="wordSearch">{wordData.wordContext}</h1>:null}
+            {allApiData[2].quoteData ? <h1 id ="quote">{`Quote: ${allApiData[2].quoteData.content}`}</h1>:<h1 id = "intro" >Wordle</h1>}
+          </Route>
