@@ -95,4 +95,4 @@ function AppNavbar() {
     //  </WordContext.Provider>
     // </div>
   );
-}
+}export default AppNavbar;
