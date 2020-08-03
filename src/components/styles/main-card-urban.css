@@ -46,4 +46,11 @@
   margin-bottom: 1vh;
     margin-left: 1vw
     }
-    
+    #like-dislike .col{
+      padding-bottom: 0;
+      
+     
+     
+  }
+  #left-border .col{
+      border-left: solid black;
