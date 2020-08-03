@@ -27,3 +27,12 @@ function MainDictionCard() {
             by {Element.author} {Element.written_on.substring(0, 10)}
           </p>
           <div id="like-dislike"></div>
+
+          Row>
+              <Col>
+                <p>Likes:{Element.thumbs_up}</p>
+              </Col>
+              <Col>
+                <p id="left-border">Dislikes:{Element.thumbs_down}</p>
+              </Col>
+            </Row>
