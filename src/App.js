@@ -14,3 +14,6 @@ import ApiContext from "./components/contexts/ApiContext";
 function App() {
   const [wordContext, setWordContext] = useState("");
   // const [ApiData, setApiData] = useState(null);
+  const [googleData, setGoogleData] = useState(null);
+  const [urbanData, setUrbanData] = useState(null);
+  const [quoteData, setQuoteData] = useState(null);
