@@ -26,3 +26,14 @@ function AppNavbar() {
   //
 
   const [wordContext, setWordContext] = useState("");
+
+  return (
+    <div>
+      <Router>
+        <Navbar bg="dark" variant="dark">
+        <div>
+            <Navbar.Brand><Link to="/">Wordle</Link></Navbar.Brand>
+          </div>
+         
+          {/* <div className="nav-bar-flex"> */}
+            <Nav></Nav>
