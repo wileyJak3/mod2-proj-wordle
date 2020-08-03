@@ -1,0 +1,46 @@
+.nav-bar-flex{
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+    margin-left: 10vw;
+  
+}
+.nav-bar-flex input{
+    
+}
+
+.nav-bar-flex button{
+    margin-right: 2vw;
+    height: 4.1vh;
+    margin-bottom: .7vh;
+    margin-top: 0;
+    padding-bottom:5vh ;
+    border-left: none;
+   
+   
+
+
+}
+
+#intro{
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 30vh;
+}
+
+#quote {
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 3vh;
+}
+
+#wordSearch{
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 10vh;
+
+}
+
+
