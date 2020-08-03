@@ -22,3 +22,10 @@
     font-weight: bold;
     font-size: 15px;
 }
+
+#example{
+  margin-top: -15px;
+  font-size: .8rem;
+  font-style: italic;
+  color: #4A4A4A ;
+}
