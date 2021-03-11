@@ -17,6 +17,7 @@
   font-weight: bold;
   margin-right: 1vw;
   font-size: 60px;
+  color: black;
 }
 #phonetic {
     margin-top: 2vh;
@@ -27,6 +28,7 @@
     font-weight: bold;
     font-size: 15px;
     padding:2vh;
+    color: black;
 }
 #example{
     margin-top: -15px;
@@ -47,6 +49,14 @@
   .main-card-list{
   margin-bottom: 5vh;
   }
+
+  .main-card-list li::marker {
+    background: white;
+    color: white;
+    /* border: solid red; */
+   
+  }
+
   .main-card-list ul{
     padding-left: 1vw;
     list-style-type: none;

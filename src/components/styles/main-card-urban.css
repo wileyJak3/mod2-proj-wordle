@@ -66,7 +66,7 @@
 #left-border .col {
   border-left: solid black;
 }
-#line-border li {
+#line-border-urban li {
   /* border-bottom: solid black 1px; */
   /* margin-right: 3vh; */
   list-style-position: inside;
@@ -78,7 +78,7 @@
     font-weight: bold;
 }
 
-#line-border ol {
+#line-border-urban ol {
   counter-reset: item;
   list-style-type: none;
   
@@ -87,11 +87,12 @@
   padding-right: 1px;
   /* padding-bottom: 10px; */
 }
-#line-border li {
+#line-border-urban li {
   display: block;
 }
-#line-border li:before {
+#line-border-urban li:before {
   background: white;
+  color: black;
   /* border: solid red; */
   padding: 0.2vw;
 
@@ -100,11 +101,11 @@
   content: counter(item) "  ";
   counter-increment: item;
 }
-#line-border p {
+#line-border-urban p {
   padding-top: 15px;
   color: white;
 }
-#line-border .card {
+#line-border-urban .card {
 
   /** color styling changes to inner card */
   /* background: #343A40 ;
@@ -220,3 +221,4 @@ border:white solid 2px;
   .urban-card .nav-pills .nav-link.active a{
       color: #343A40;
   }
+ 

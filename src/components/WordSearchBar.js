@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import wordContext from "./contexts/WordContext";
 import ApiCall from "./ApiCall";
-import {Button,Spinner} from 'react-bootstrap'
-
+import { Button, Spinner, InputGroup, Col, Form} from "react-bootstrap";
 
 function WordSearchBar() {
   const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
@@ -12,7 +11,6 @@ function WordSearchBar() {
   const [spellCheck, setSpellCheckData] = useState(null);
   const dataContext = useContext(wordContext);
   const [toggle, setToggle] = useState(false);
-  
 
   //
   //! ─── SPELL CHECK API ────────────────────────────────────────────────────────────
@@ -46,56 +44,54 @@ function WordSearchBar() {
     }
   }
 
+  // this funtion allows the display fo the words typed by the user as they are type (removed twoards the end due to time constrains)
 
-// this funtion allows the display fo the words typed by the user as they are type (removed twoards the end due to time constrains)
-
-  let handleChange =(event)=> {
+  let handleChange = (event) => {
     // console.log("changed");
     console.log(event.target.value);
     //* setName(event.target.value)
     // console.log(event.target.placeholder);
     // console.log(event.target.type);
-    
+
     //~ challenge
     setTempName(event.target.value);
-  }
+  };
 
-  let generateDef =(name)=> {
-    return name ? <ApiCall word={word} /> : <Spinner animation="border" role="status">
-    <span className="sr-only">Loading...</span>
-  </Spinner>;
+  let generateDef = (name) => {
+    return name ? (
+      <ApiCall word={word} />
+    ) : (
+      <Spinner animation="border" role="status">
+        <span className="sr-only">Loading...</span>
+      </Spinner>
+    );
     // {console.log("this is the current name",{name})}
-  }
+  };
 
   // when your writing a fucntion can simply use the variable name, don't need the curly braces. In fact, if we use the curly braces we will set our variable to a js object and not a value.
-  
-  
-  
+
   // This function toggles a state value for conditonal rendering
-  let toggleSubmitValue =()=> {
+  let toggleSubmitValue = () => {
     setToggle(!toggle);
-  }
+  };
 
-
-  
   // Funtion sends the value to the apicall file to be queried
 
-  let SubmitValue = () =>{
+  let SubmitValue = () => {
     // setName(tempName);
     // console.log(tempName);
     // console.log(name);
     console.log("clicked");
     dataContext.setWordContext(null);
     toggleSubmitValue();
-  }
-
+  };
 
   // function resets the search bar
-  let  SubmitValue2 =() => {
+  let SubmitValue2 = () => {
     dataContext.setWordContext(tempName);
     toggleSubmitValue();
     setTempName("");
-  }
+  };
 
   // function reset(){
   //   dataContext.setWordContext(null);
@@ -107,13 +103,15 @@ function WordSearchBar() {
   // }
 
   return (
-
-    
     <div className="nav-bar-flex">
+    <Form.Row className="align-items-center">
+     <Col lg={12} className="my-1">
       {/* <div>{tempName ? <h6>Word: {tempName} </h6> : <h6>{word}</h6>}</div> */}
-      <div>
-        
-        {toggle ? null : (
+      <InputGroup>
+        {
+          
+        toggle ? null : (
+          
           <input
             onChange={handleChange}
             type="text"
@@ -126,12 +124,24 @@ function WordSearchBar() {
           />
         )}
         {/* {toggle ?<button onClick={SubmitValue}>Search</button>: <button onClick={SubmitValue2}>Submit</button>} */}
-        <Button onClick={SubmitValue} variant="light">Search</Button> 
+        
+        <InputGroup.Prepend>
+        <div id="search-button">
+          <Button onClick={SubmitValue} variant="light">
+            Search
+          </Button>
+          </div>
+        </InputGroup.Prepend>
+        
+
         {/* <button onClick={SubmitValue}>Search</button> */}
         {toggle ? SubmitValue2() : null}
+        {generateDef(word)}
+        </InputGroup>
+      
+      </Col>
+      </Form.Row>
       </div>
-      {generateDef(word)}
-    </div>
   );
 }
 

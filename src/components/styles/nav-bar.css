@@ -12,17 +12,24 @@
 }
 
 .nav-bar-flex button{
-    margin-right: 2vw;
-    height: 4.1vh;
+     margin-right: 2vw;
+    /* height: 1vh;
     margin-bottom: .7vh;
     margin-top: 0;
     padding-bottom:5vh ;
-    border-left: none;
-   
-   
+    border-left: none; */ 
+    
+}
 
+#search-button .btn{
+    border-top-right-radius:  3px; 
+    border-bottom-right-radius:  3px; 
+    border-top-left-radius:  0px; 
+    border-bottom-left-radius:  0px; 
 
 }
+
+
 
 #intro{
     text-align: center;

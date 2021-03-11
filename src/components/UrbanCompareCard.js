@@ -345,7 +345,7 @@ let UrbanMainCard = () => {
                     {/* {allApiData[1].urbanData ? <Compare/> : null} */}
 
                     {/*//!!Stuff I need for urban card*/}
-                    <div id="line-border">
+                    <div id="line-border-urban">
                       <ol className="custom">{printMeaning()}</ol>
                     </div>
                     {/* {urbanData ? printMeaning() : null} */}
@@ -353,7 +353,7 @@ let UrbanMainCard = () => {
                     {/* </Card.Body>
             </Card>*/}
                   </Route>
-                  <div id="line-border">
+                  <div id="line-border-urban">
                     <div id="urban-background-comp">{createPaths()}</div>
                   </div>
                   <Route path="/">
