@@ -18,7 +18,7 @@ import "./styles/compare-card.css";
 
 // Component wasn't complete, but it was usppose to display all the defintions available for urban dicitionary and google dictionary side by side on a single
 
-let MainDictionCard = () => {
+let DictionaryCompareCard = () => {
   //
   //? ─── Context  ───────────────────────────────────────────────────────────────────────────
   const apiContextData = useContext(ApiContext);
@@ -42,24 +42,24 @@ let MainDictionCard = () => {
       <li>
         <div>
           <h6 id="part-of-speach">{Element.partOfSpeech}</h6>
-          {console.log(Element)}
+          {console.log(Element,"element")}
           <ol>
-            {Element.definitions.map((definition) => (
+            {/* {Element.definitions.map((definition) => ( */}
               <li>
-                <p>{definition.definition}</p>
-                <p id="example">{definition.example}</p>
+                <p>{Element.definitions[0].definition}</p>
+                <p id="example">{Element.definitions[0].example}</p>
                
                 
                 <div className ="synonyms-main-card">
                 <Row>
                   {synonymState
-                    ? printSynonyms2(definition.synonyms)
+                    ? printSynonyms2(Element.definitions[0].synonyms)
                     : null}
                 </Row>
                 </div>
                 
               </li>
-            ))}
+            {/* ))} */}
           </ol>
           {/* <div>
           {printDefinitions(Element.definitions)}
@@ -232,7 +232,7 @@ let MainDictionCard = () => {
               <Nav variant="pills" defaultActiveKey="#overview">
                 <Nav.Item>
                   <Nav.Link href="#overview">
-                    <Link to="/Dictionary">overview</Link>
+                    <Link to="/Compare">overview</Link>
                   </Nav.Link>
                 </Nav.Item>
                 {/* //* Creates the parts of speech tabs for the cards */}
@@ -242,18 +242,21 @@ let MainDictionCard = () => {
             <Card.Body>
               <Card.Title>
                 <div className="card-btm-border">
-                  <Row>
+                  
+                  <Row >
                     <Col>
-                      
+                    <Row lg={1} xl={1}>
+                      <Col>
                         <div className="comp-card">
-                          <div>
+                        {/* <Row> */}
                             <h2 id="title-header">{`${googleData.word}`}</h2>
-                          </div>
-                          <div>
+                            {/* </Row> */}
+                            {/* <Row>
                             <p id="phonetic-comp">{`[${googleData.phonetics[0].text}]`}</p>
-                          </div>
+                            </Row> */}
                         </div>
-                      
+                      </Col>
+                      </Row>
 
                       {/*//* The string literal for the phonetics of the searched word */}
                     </Col>
@@ -308,9 +311,8 @@ let MainDictionCard = () => {
                 <ol>{googleData ? printMeaningTab("noun") : null}</ol>
               </Route> */}
               {createPaths()}
-              
 
-              <Route path="/Dictionary">
+              <Route path="/Compare">
                 {/* {allApiData[1].urbanData ? <Compare/> : null} */}
                 <div className="main-card-list">
                   <ul>
@@ -320,7 +322,6 @@ let MainDictionCard = () => {
               </Route>
 
               <Route path="/">
-                
                 {/* {allApiData[0].googleData ? <MainDictionaryCard /> : null} */}
                 {/* {googleData ? printMeaning() : null} */}
               </Route>
@@ -333,4 +334,4 @@ let MainDictionCard = () => {
   );
 };
 
-export default MainDictionCard;
+export default DictionaryCompareCard;

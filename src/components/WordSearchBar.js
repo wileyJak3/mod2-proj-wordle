@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import wordContext from "./contexts/WordContext";
 import ApiCall from "./ApiCall";
-import Button from 'react-bootstrap/Button'
+import {Button,Spinner} from 'react-bootstrap'
+
 
 function WordSearchBar() {
   const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
@@ -60,7 +61,9 @@ function WordSearchBar() {
   }
 
   let generateDef =(name)=> {
-    return name ? <ApiCall word={word} /> : "Loading...";
+    return name ? <ApiCall word={word} /> : <Spinner animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+  </Spinner>;
     // {console.log("this is the current name",{name})}
   }
 

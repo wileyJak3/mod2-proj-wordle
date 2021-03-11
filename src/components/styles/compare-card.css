@@ -1,0 +1,75 @@
+.switch-button-location{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+/* .switch-button-location  */
+.switch-button{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.react-switch-handle{
+    transform: translateX(-1px);
+}
+.manageSwitch{
+    transform: translateX(-1px);
+}
+.comp-card-synonym-slider {
+    display: flex;
+    flex-direction: row;
+
+}
+.comp-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    /* border-bottom: solid black 1px; */
+}
+#phonetic-comp {
+    margin-top: 10px;
+    margin-left:1.6rem;
+    font-size: 35px;
+    color: #4A4A4A
+}
+.card-btm-border{
+    border-bottom: solid black 1px;
+}
+#display-synonym-text{
+    color: #8e8484;
+    font-size: medium;
+
+}
+.meaning-tab-cards{
+    /* background: greenyellow; */
+    color: #343A40;
+    border: none;
+}
+
+#synonym-btn-styling button{
+    padding: 3px;
+    padding-top:0px ;
+    border: none;
+}
+#synonym-btn-styling .col {
+    padding: 1px;
+    padding-right:2px ;
+    
+}
+.dictionary-card .nav-item a{
+color: black;
+}
+.dictionary-card .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: #343A40;
+    pointer-events: none;
+}
+       
+.dictionary-card .nav-pills .nav-link.active a{
+    color: white;
+}
+
+
+

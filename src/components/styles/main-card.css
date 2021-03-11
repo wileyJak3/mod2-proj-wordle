@@ -12,6 +12,7 @@
   margin-left: 0.3vw;
   margin-right: 0.5vw;
 }
+
 #title-header {
   font-weight: bold;
   margin-right: 1vw;
@@ -25,6 +26,7 @@
   margin-top: 2vh;
     font-weight: bold;
     font-size: 15px;
+    padding:2vh;
 }
 #example{
     margin-top: -15px;
@@ -41,4 +43,28 @@
     font-size: 1.3rem;
   
   }
-  
+
+  .main-card-list{
+  margin-bottom: 5vh;
+  }
+  .main-card-list ul{
+    padding-left: 1vw;
+    list-style-type: none;
+    margin-right:2vw;
+    }
+
+   .synonyms-main-card button{
+      padding: 3px;
+      padding-top:0px ;
+      border: none;
+  }
+   .synonyms-main-card .col {
+      padding: 1px;
+      padding-right:2px ;
+      
+  }
+
+  .synonyms-main-card{
+    margin-top: 1vh ;
+    margin-bottom: 1vh;
+  }

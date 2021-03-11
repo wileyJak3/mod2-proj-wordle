@@ -12,7 +12,6 @@ import ApiContext from "./contexts/ApiContext";
 import { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles/main-card-urban.css";
-import WordContext from "./contexts/WordContext";
 
 // The main dictionary car is the card that shows an overview of the dictionary clientInformatio
 
@@ -286,10 +285,10 @@ let UrbanMainCard = () => {
         <Col>
           <Card>
             <Card.Header>
-              <Nav variant="pills" defaultActiveKey="/Urban">
+              <Nav variant="pills" defaultActiveKey="/Compare">
                 <Nav.Item>
-                  <Nav.Link href="/Urban">
-                    <Link to="/Urban">definitions</Link>
+                  <Nav.Link href="/Compare">
+                    <Link to="/Compare">definitions</Link>
                   </Nav.Link>
                 </Nav.Item>
                 {/* //* Creates the parts of speech tabs for the cards */}
@@ -304,8 +303,6 @@ let UrbanMainCard = () => {
                     urbanData[0].word.substring(1)} */}
                      {apiContextData[0].googleData[0].word.substring(0, 1).toUpperCase() +
                   apiContextData[0].googleData[0].word.substring(1)}
-                    
-                    
                 </h1>
               </Card.Header>
             </div>
@@ -344,7 +341,7 @@ let UrbanMainCard = () => {
                 <ol>{googleData ? printMeaningTab("noun") : null}</ol>
               </Route> */}
 
-                  <Route path="/Urban">
+                  <Route path="/Compare">
                     {/* {allApiData[1].urbanData ? <Compare/> : null} */}
 
                     {/*//!!Stuff I need for urban card*/}
@@ -357,7 +354,7 @@ let UrbanMainCard = () => {
             </Card>*/}
                   </Route>
                   <div id="line-border">
-                  <div id="urban-background-comp">{createPaths()}</div>
+                    <div id="urban-background-comp">{createPaths()}</div>
                   </div>
                   <Route path="/">
                     {/* {allApiData[0].googleData ? <MainDictionaryCard /> : null} */}

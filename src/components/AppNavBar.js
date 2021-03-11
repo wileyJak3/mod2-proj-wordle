@@ -11,8 +11,9 @@ import DictionaryCard from "./DictionaryCard";
 import MainDictionaryCard from "./MainDictionaryCard";
 import UrbanMainCard from "./UrbanMainCard";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Compare from './Compare'
+import DictionaryCompareCard from './DictionaryCompareCard'
 import './styles/nav-bar.css'
+import ComparePage from "./ComparePage";
 
 
 // This functionis what's passed into the app.js and basically the hub of the entire program
@@ -52,6 +53,12 @@ let AppNavbar = () => {
                 <Link to="/Dictionary">Dictionary</Link>
               </Nav.Link>
             </Nav>
+            {/*//! Incomplete Component */}
+            <Nav>
+              <Nav.Link>
+                <Link to="/Compare">Compare</Link>
+              </Nav.Link>
+            </Nav>
             <Nav>
               {/* <WordContext.Provider value={{ wordContext, setWordContext }}> */}
               <WordSearchBar />
@@ -60,12 +67,7 @@ let AppNavbar = () => {
             </Nav>
            
 
-            {/*//! Incomplete Component */}
-            {/* <Nav>
-              <Nav.Link>
-                <Link to="/Compare">Compare</Link>
-              </Nav.Link>
-            </Nav> */}
+            
             
           {/* </div> */}
         </Navbar>
@@ -80,7 +82,8 @@ let AppNavbar = () => {
           </Route>
 
           <Route path="/Compare">
-            {allApiData[1].urbanData ? <Compare/> : null}
+            {/* {allApiData[1].urbanData ? <DictionaryCompareCard/> : null} */}
+            {allApiData[1].urbanData ? <ComparePage/> : null}
           </Route>
 
           <Route path="/">
